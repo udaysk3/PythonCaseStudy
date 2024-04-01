@@ -47,7 +47,6 @@ INSERT INTO products VALUES
 
 
    <h2>Queries</h2>
-    <p>Here are some sample queries:</p>
     <pre>
         <code>
 SELECT * FROM CUSTOMERS;
