@@ -1,8 +1,7 @@
 
-<body>
-    <h1>Database Setup</h1>
-    <p>Below is the MS SQL code to create tables and insert sample data:</p>
-    <h2>Customers Table</h2>
+ <h1>Database Setup</h1>
+ <p>Below is the MS SQL code to create tables and insert sample data:</p>
+  <h2>Customers Table</h2>
     <pre>
         <code>
 CREATE TABLE customers (
@@ -23,12 +22,9 @@ INSERT INTO customers VALUES
 (8, 'Emma Wilson', 'emma@example.com', 'password8'),
 (9, 'William Taylor', 'william@example.com', 'password9'),
 (10, 'Olivia Adams', 'olivia@example.com', 'password10');
-        </code>
-    </pre>
+ 
 
-    <h2>Products Table</h2>
-    <pre>
-        <code>
+  <h2>Products Table</h2>
 CREATE TABLE products (
     product_id INT PRIMARY KEY,
     name VARCHAR(255),
@@ -48,12 +44,9 @@ INSERT INTO products VALUES
 (8, 'Microwave Oven', 'Countertop microwave', 80.00, 15),
 (9, 'Blender', 'High-speed blender', 70.00, 20),
 (10, 'Vacuum Cleaner', 'Bagless vacuum cleaner', 120.00, 10);
-        </code>
-    </pre>
 
-    <!-- Other tables and data omitted for brevity -->
 
-    <h2>Queries</h2>
+   <h2>Queries</h2>
     <p>Here are some sample queries:</p>
     <pre>
         <code>
@@ -64,6 +57,3 @@ SELECT * FROM order_items;
 SELECT * FROM cart;
         </code>
     </pre>
-</body>
-</html>
-```
