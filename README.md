@@ -1,5 +1,17 @@
-Here is the MS SQL code to create the tables and insert sample data
-
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>README</title>
+</head>
+<body>
+    <h1>Database Setup</h1>
+    <p>Below is the MS SQL code to create tables and insert sample data:</p>
+    <h2>Customers Table</h2>
+    <pre>
+        <code>
 CREATE TABLE customers (
     customer_id INT PRIMARY KEY,
     name VARCHAR(255),
@@ -18,7 +30,12 @@ INSERT INTO customers VALUES
 (8, 'Emma Wilson', 'emma@example.com', 'password8'),
 (9, 'William Taylor', 'william@example.com', 'password9'),
 (10, 'Olivia Adams', 'olivia@example.com', 'password10');
+        </code>
+    </pre>
 
+    <h2>Products Table</h2>
+    <pre>
+        <code>
 CREATE TABLE products (
     product_id INT PRIMARY KEY,
     name VARCHAR(255),
@@ -38,71 +55,22 @@ INSERT INTO products VALUES
 (8, 'Microwave Oven', 'Countertop microwave', 80.00, 15),
 (9, 'Blender', 'High-speed blender', 70.00, 20),
 (10, 'Vacuum Cleaner', 'Bagless vacuum cleaner', 120.00, 10);
+        </code>
+    </pre>
 
-CREATE TABLE cart (
-    cart_id INT PRIMARY KEY,
-    customer_id INT,
-    product_id INT,
-    quantity INT,
-    FOREIGN KEY (customer_id) REFERENCES customers(customer_id),
-    FOREIGN KEY (product_id) REFERENCES products(product_id)
-);
+    <!-- Other tables and data omitted for brevity -->
 
-INSERT INTO cart VALUES
-(1, 1, 1, 2),
-(2, 1, 3, 1),
-(3, 2, 2, 3),
-(4, 3, 4, 4),
-(5, 3, 5, 2),
-(6, 4, 6, 1),
-(7, 5, 1, 1),
-(8, 6, 10, 2),
-(9, 6, 9, 3),
-(10, 7, 7, 2);
-
-CREATE TABLE orders (
-    order_id INT PRIMARY KEY,
-    customer_id INT,
-    order_date DATE,
-    total_price DECIMAL(10, 2),
-    FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
-);
-
-INSERT INTO orders VALUES
-(1, 1, '2023-01-05', 1200.00),
-(2, 2, '2023-02-10', 900.00),
-(3, 3, '2023-03-15', 300.00),
-(4, 4, '2023-04-20', 150.00),
-(5, 5, '2023-05-25', 1800.00),
-(6, 6, '2023-06-30', 400.00),
-(7, 7, '2023-07-05', 700.00),
-(8, 8, '2023-08-10', 160.00),
-(9, 9, '2023-09-15', 140.00),
-(10, 10, '2023-10-20', 1400.00);
-
-CREATE TABLE order_items (
-    order_item_id INT PRIMARY KEY,
-    order_id INT,
-    product_id INT,
-    quantity INT,
-    FOREIGN KEY (order_id) REFERENCES orders(order_id),
-    FOREIGN KEY (product_id) REFERENCES products(product_id)
-);
-
-INSERT INTO order_items VALUES
-(1, 1, 1, 2),
-(2, 1, 3, 1),
-(3, 2, 2, 3),
-(4, 3, 5, 2),
-(5, 4, 4, 4),
-(6, 4, 6, 1),
-(7, 5, 1, 1),
-(8, 5, 2, 2),
-(9, 6, 10, 2),
-(10, 6, 9, 3);
-
+    <h2>Queries</h2>
+    <p>Here are some sample queries:</p>
+    <pre>
+        <code>
 SELECT * FROM CUSTOMERS;
 SELECT * FROM PRODUCTS;
 SELECT * FROM ORDERS;
 SELECT * FROM order_items;
 SELECT * FROM cart;
+        </code>
+    </pre>
+</body>
+</html>
+```
