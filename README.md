@@ -1,11 +1,4 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>README</title>
-</head>
 <body>
     <h1>Database Setup</h1>
     <p>Below is the MS SQL code to create tables and insert sample data:</p>
